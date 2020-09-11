@@ -1,0 +1,22 @@
+.fa_search {
+  position: absolute;
+  left: 20px;
+  top: 12px;
+}
+
+.fa_times {
+  position: absolute;
+  right: 20px;
+}
+
+.form_inline {
+  position: relative;
+  width: 50% !important;
+}
+
+.search_bar {
+  width: 100% !important;
+  border: none;
+  border-radius: 5%;
+  padding: 10px;
+}
