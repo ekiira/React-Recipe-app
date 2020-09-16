@@ -9,6 +9,8 @@
     align-items: center;
     min-width: 40%;
 }
-.image {
-    /* border-radius: 30%; */
+
+.card_wrapper {
+    width: 30%;
 }
+
