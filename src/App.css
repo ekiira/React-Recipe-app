@@ -3,31 +3,6 @@
   background: rgba(235,233,249,1);
 }
 
-.search-form {
-  min-height: 10vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.breadcrumb {
+  background-color: #f8f9fa!important;
 }
-.search-bar {
-  width: 50%;
-  border: none;
-  border-radius: 5%;
-  padding: 10px;
-}
-.search-button {
-  background-color: lightblue;
-  border: none;
-  border-radius: 5%;
-  padding: 10px 20px;
-  color: white;
-}
-.recipes {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-body {
-  padding-top: 100px
-  }

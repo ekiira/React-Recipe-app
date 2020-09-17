@@ -1,8 +1,7 @@
 import React from 'react';
-import style from './Header.module.css'
 
 const Header = () => (
-  <header className='bg-light fixed-top'>
+  <header className='bg-light'>
     <h3 className='text-center py-4'>Resspice</h3>
 </header>
 )
