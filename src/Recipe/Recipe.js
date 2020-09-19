@@ -8,46 +8,44 @@ import { Card , Breadcrumb, ListGroup } from 'react-bootstrap'
 import Header from '../Header/Header'
 
 const Recipe = () => {
-  const recipess = useSelector((state) => state.recipes.allRecipes)
-
-  // const onInternProfileView = (id) => {
-  //   setIntern(interns.filter(intern => intern._id === id))
-  // }
-
+  const recipe = useSelector(({recipe}) => recipe.recipe)
+  
   return(
     <>
       <Header/>
+    {recipe ? (
+      <>
       <Breadcrumb>
-          <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-          <Breadcrumb.Item active>Chicken</Breadcrumb.Item>
-        </Breadcrumb>
+        <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+        <Breadcrumb.Item active>{recipe.label}</Breadcrumb.Item>
+      </Breadcrumb>
       <div className={`${style.card_wrapper} mx-auto py-5`}>
-       
-    
         <Card>
-          {/* {recipess.map(({recipe}, i) => ( */}
-            <>
-              <Card.Img src="https://www.edamam.com/web-img/4dd/4dd1c7a0d8b00e8929bd6babf0968ba2.jpg"  className='img-fluid'/>
-              <Card.Body>
-                <Card.Title className='text-center'>Claic Waffles</Card.Title>
-                <Card.Text className='font-weight-bold text-center'>
-                  Ingredients
-                </Card.Text>
-                  <ListGroup variant="flush">
-                    <ListGroup.Item>Cras justo odio</ListGroup.Item>
-                    <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-                    <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-                  </ListGroup>
-    
-              </Card.Body>
-            </>
-          {/* ))}   */}
-          
+          <>
+            <Card.Img src={recipe.image}  className='img-fluid' alt={recipe.label}/>
+            <Card.Body>
+              <Card.Title className='text-center'>{ recipe.label }</Card.Title>
+              <Card.Text className='font-weight-bold text-center'>
+                Ingredients
+              </Card.Text>
+                <ListGroup variant="flush">
+                {   recipe.ingredients.map((ing, i) => (
+                  <ListGroup.Item key={i}> {ing.text} </ListGroup.Item>
+                  )) }
+                </ListGroup>
+
+            </Card.Body>
+          </>
         </Card>
-      </div>
+    </div>
+    </>
+    ) : (
+      <Breadcrumb>
+      <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+    </Breadcrumb>
+    )}
    </>
     )
 }
 
 export default Recipe;
-

@@ -20,7 +20,7 @@ import rootReducer from './redux/reducer/rootReducer';
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['recipes']
+  whitelist: ['recipes', 'recipe']
 };
 
 // Pass the root reducer and persist config into the persist reducer

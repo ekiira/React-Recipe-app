@@ -3,6 +3,7 @@ import dotenv from 'dotenv'
 
 
 export const GET_RECIPES = 'GET_RECIPES';
+export const SELECTED_RECIPE = 'SELECTED_RECIPE'
 dotenv.config()
 
 const APP_ID = process.env.REACT_APP_APP_ID
@@ -22,4 +23,11 @@ export const getRecipes = (query) => (dispatch) => {
   .catch((err) => {
     console.log('err', err)
   })
+}
+
+export const selectedRecipe = (nr) => {
+  return {
+    type: SELECTED_RECIPE,
+    payload: nr
+  } 
 }
