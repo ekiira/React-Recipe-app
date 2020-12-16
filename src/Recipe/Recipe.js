@@ -8,7 +8,7 @@ import { Card , Breadcrumb, ListGroup } from 'react-bootstrap'
 import Header from '../Header/Header'
 
 const Recipe = () => {
-  const recipe = useSelector(({recipe}) => recipe.recipe)
+  const recipe = useSelector(({recipe}) => recipe)
   
   return(
     <>

@@ -41,3 +41,15 @@
   justify-content: space-around;
   flex-wrap: wrap;
 }
+
+.info {
+  text-align: center;
+  font-size: 24px;
+  color: #333333;
+  font-style: italic;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+}
